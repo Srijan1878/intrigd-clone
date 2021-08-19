@@ -1,0 +1,883 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar{
+  width: 0%;
+}
+html,body{
+  overflow-x: hidden;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+.logoImg{
+width: 52px;
+height: 72px;  
+}
+.firstSectionContainer {
+  background-image: linear-gradient(to bottom, #62c8f0, #c1eafa);
+  width: 100vw;
+  height: auto;
+  color: #333333;
+  padding-bottom: 25px;
+}
+.navbarItem {
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+.navbarItem::before{
+    content: '';
+    position: absolute;
+    background-color: #222222;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    bottom: -3px;
+    right: 0px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    }
+.navbarItem::after{
+content: '';
+position: absolute;
+background-color: #222222;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+bottom: -3px;
+left: 0px;
+opacity: 0;
+transition: all 0.3s ease-in-out;
+}
+.navbarItem:hover::after{
+    opacity: 1;
+    left: 50%;
+    transform: translateX(10%);
+}
+.navbarItem:hover::before{
+    opacity: 1;
+    right: 50%;
+    transform: translateX(-10%);
+}
+.flexibleNavbar {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  background-color: transparent;
+  align-items: center;
+}
+.logoContainer {
+  width: 35vw;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+.floatingPhoneImg {
+  width: 18vw;
+  height: 70vh;
+  animation: bounce 3s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.navbarItemContainer {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
+  padding-left: 25px;
+  width: calc(65vw - 25px);
+  height: 80px;
+  justify-content: center;
+}
+.titleSection {
+  padding-left: 15%;
+  margin-top: 80px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65vw;
+}
+.firstSectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.8125rem;
+  max-width: 28rem;
+  font-weight: 800;
+  opacity: 1;
+  transition: all 1s;
+}
+.hiddenText {
+  font-family: "Raleway", sans-serif;
+  font-size: 45px;
+  max-width: 28rem;
+  font-weight: 800;
+  opacity: 0;
+  transform: translateX(-150%);
+}
+.appstoreBtn {
+  background-color: transparent;
+  border: 2px solid #333333;
+  width:10.625rem;
+  height: 51px;
+  border-radius: 25px;
+  font-size: 21px;
+  transition: all 0.6s;
+  margin: 15px 15px 5px 0px;
+}
+.appstoreBtn:hover {
+  background-color: white;
+  border-color: #29b9f2;
+}
+.btnText{
+  margin-left: 5px;
+}
+.appstoreBtn:hover .btnText {
+  color: #29b9f2;
+  transition: color 0.5s;
+  transition-delay: 0.3s;
+}
+.aboutContainer {
+  width: 100vw;
+  height: 645px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutTitleText {
+  font-family: "Raleway", sans-serif;
+  font-size: 37px;
+  font-weight: 900;
+  color: #333333;
+  margin-bottom: 20px;
+}
+.aboutSectionDescription {
+  padding-top: 60px;
+}
+.aboutSectionDescription p {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 12px;
+  font-family: "Raleway", sans-serif;
+  max-width: 550px;
+}
+.aboutWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.appStoreBtnContainer{
+  opacity: 1;
+  transition: all 0.45s ease-in-out;
+  transition-delay: 0.2s;
+}
+.initialAppStoreBtnContainer{
+  opacity: 0;
+  transform: translateY(55px);
+}
+.downloadBtn {
+  background-color: #29b9f2;
+  color: white;
+  padding: 12px 28px 12px 28px;
+  border-radius: 25px;
+  font-size: 19px;
+  border: 1px solid #29b9f2;
+  outline: none;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.downloadBtn:hover{
+  background-color: white;
+  color: #29b9f2;
+  border: 1.5px solid #29b9f2;
+}
+.aboutSectionImage {
+  width: 42%;
+  height: 45%;
+}
+.cardComponent {
+  width: 27%;
+  height: 260px;
+  background-color: black;
+}
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+}
+.featureWrapper {
+  width: 100vw;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.featureSection {
+  width: 100vw;
+  min-height: 480px;
+  display: flex;
+  background-color: #29b9f2;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.cardComponent {
+  background-color: #29b9f2;
+  box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.6s;
+  width: 350px;
+}
+.cardComponent:hover {
+  background-color: #29b9f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+background: rgba( 41, 185, 242, 0.50 );
+box-shadow: 0 8px 32px 0 rgba(29, 136, 179, 0.4);
+backdrop-filter: blur( 1.5px );
+-webkit-backdrop-filter: blur( 1.5px );
+border-radius: 10px;
+
+  /* border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+.cardComponent h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 17px;
+  margin: 5px;
+}
+.cardComponent h2 {
+  margin: 5px;
+  font-weight: 500;
+}
+.featureSectionTitleText {
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+}
+.screenshotsContainer {
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 95px;
+}
+.screenshotsWrapper > h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #333333;
+  text-align: center;
+  font-weight: 800;
+}
+.reviewsContainer {
+  background-image: linear-gradient(to bottom, #62c8f0 60%, #c1eafa);
+  height: 550px;
+  width: 100vw;
+  color: white;
+}
+.MuiSvgIcon-root{
+  display: none;
+}
+.contactUsContainer {
+  height: 48.75rem;
+  background-image: linear-gradient(to bottom, #62c8f0, #c1eafa);
+  position: relative;
+  width: 100vw;
+}
+.btnContainer {
+  display: flex;
+  max-width: 80vw;
+}
+input {
+  width: auto;
+  margin: 12px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding-left: 8px;
+}
+textarea {
+  /* min-height: none; */
+  width: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 12px;
+  padding-left: 8px;
+}
+textarea::placeholder {
+  font-size: 16px;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+.contactUsForm {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  width: 80vw;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 100px;
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contactUsFormInputFields {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 39%;
+}
+.downloadAppWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.downloadAppWrapper h1 {
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+  margin-top: 80px;
+}
+.downloadAppBtn {
+  background-color: white;
+  border-radius: 70px;
+  color: #333333;
+  transition: all 0.6s;
+  border: none;
+  outline: none;
+  margin: 12px 12px 12px 12px;
+  font-size: 16px;
+  font-weight: 500;
+  height: 58px;
+  width: 170px;
+}
+.downloadAppBtn:hover {
+  background-color: #222222;
+  color: white;
+}
+.contactUsInformation > h2 {
+  font-size: 34px;
+  line-height: 36px;
+  font-weight: 700;
+}
+.footerContainer {
+  width: 100vw;
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.footerContainer p {
+  color: white;
+  margin: 20px;
+}
+.footerContainer p:first-child {
+  margin-top: 200px;
+}
+.contactUsFormInputFields button {
+  width: 120px;
+  height: 46px;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 60px;
+  outline: none;
+  background-color: #333;
+  margin-left: 12px;
+  transition: all 0.45s;
+}
+.contactUsFormInputFields button:hover {
+  background-color: #29b9f2;
+}
+.contactNumber{
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.phoneIcon{
+  border: 2px #333333 solid;
+  border-radius: 50%;
+  padding: 6px;
+}
+.emailIcon{
+  border: 2px #333333 solid;
+  padding: 6px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.emailContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  font-family: sans-serif;
+  margin-left: -12px;
+}
+.socialMediaIconsContainer{
+  display: flex;
+}
+.socialMediaIconsContainer svg{
+  fill: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 45px;
+  margin: 4px;
+  height: 45px;
+  cursor: pointer;
+  padding:8px
+}
+.reviewsAuthor{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 40px;
+}
+.reviewsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.singleReviewComponent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80vw;
+}
+.reviewStarList{
+  display: flex;
+  list-style-type: none;
+}
+.lines{
+  width: 1px;
+  height: 28px;
+  background-color: white;
+  position: relative;
+  margin: 40px;
+}
+.lines::after{
+  content: '';
+  width: 1px;
+  height: 24px;
+  background-color: white;
+  position: absolute;
+  left: -6px;
+  margin-top: 2px;
+}
+.lines::before{
+  content: '';
+  width: 1px;
+  margin-top: 2px;
+  height: 24px;
+  background-color: white;
+  position: absolute;
+  right: -6px;
+}
+.singleReviewComponent h4{
+  margin-top: 15px;
+}
+.appScreenshotImg{
+  max-width: 325px;
+  height: 580px;
+}
+.unactiveScreenshotImg{
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.5;
+  max-width: 325px;
+  height: 600px;
+}
+.screenshotsWrapper .slick-slide div{
+  display: flex;
+  justify-content: center;
+}
+.toggleNavbar{
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 99;
+  width: 100vw;
+}
+.fixedNavbarItemContainer{
+  height: 80px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
+  padding-left: 25px;
+  width: calc(65vw - 25px);
+  justify-content: center;
+}
+.hamburgerMenuIcon{
+  position: absolute;
+  left: 80%;
+  top: 3.5%;
+  opacity: 0;
+  z-index: -5;
+}
+.hamburgerMenu{
+  display: flex;
+  justify-content: center;
+
+}
+.flexibleNavbarWrapper{
+  display: flex;
+  width: 100vw;
+}
+.hiddenHamburgerMenuContainer{
+  height: 0;
+}
+.hamburgerMenuListContainer{
+  list-style-type: none;
+  position: fixed;
+  z-index: 55;
+  width: 65%;
+  transform: scaleY(1) ;
+  transform-origin: 0 0;
+  background-color: #ccc;
+  padding-left: 10px;
+  transition: all ease 0.45s;
+}
+.hamburgerMenuListContainer li:first-child{
+  margin-top: 0px;
+}
+.hamburgerMenuListContainer li{
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-top: 1px solid #eee;
+  padding-top: 2px;
+}
+.hiddenHamburgerMenuListContainer{
+  font-family:"Raleway", sans-serif;
+  transform-origin: top;
+  color: #333;
+  transform:  scaleY(0);
+  transition: all ease 0.45s;
+  list-style-type: none;
+  background-color: #ccc;
+  padding-left: 10px;
+  width: 65%;
+}
+.hamburgerMenuFixedNavbarListItem{
+display: none;
+}
+.scrollToTopBtn{
+  position: fixed;
+  right: 25px;
+  top: 92.5vh;
+  outline: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background: rgba( 41, 185, 242, 0.80 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20.0px );
+  -webkit-backdrop-filter: blur( 20.0px );
+  border: none;
+}
+@media only screen and (min-width:992px) and (max-width: 1100px){
+  .title{
+    font-size: 2.375rem;
+  }
+  .wrapper{
+    width: 72vw;
+  }
+  .floatingPhoneImg{
+    width: 210px;
+    height: 435px;
+  }
+}
+@media only screen and (min-width:769px) and (max-width: 991px) {
+  body{
+    padding-right: 0px;
+  }
+  .aboutWrapper{
+    align-items: center;
+  }
+  .cardComponent{
+    margin: 15px;
+  }
+  
+  .aboutSectionImage{
+    margin-right: 8px;
+  }
+  .appstoreBtn{
+    width: 8.2rem;
+  }
+  .appStoreBtnContainer{
+    display: flex;
+    margin:auto;
+  }
+  .title{
+    font-size: 1.875rem
+  }
+  .navbarItemContainer {
+    display: none;
+    width: 50vw;
+  }
+  .hamburgerMenuIcon{
+    opacity: 1;
+    z-index: 100;
+    transform: scale(1.2);
+  }
+  .floatingPhoneImg{
+    width: 210px;
+    height: 435px;
+  }
+  .wrapper{
+    width: 72vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .titleSection{
+    width: 100vw
+  }
+  .cardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardComponent{
+    margin-top: 15px;
+    max-width: 85%;
+  }
+  .aboutWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutContainer{
+    height: auto;
+    padding-bottom: 20px;
+    margin-top: 2.5rem;
+  }
+  .aboutSectionDescription p, .aboutSectionDescription h1{
+   max-width: 88%;
+   text-align: center;
+  }
+  .aboutSectionDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutContainer{
+    display: flex;
+    justify-content: center;
+  }
+  .aboutSectionImage{
+    width: 68%
+  }
+.wrapper{
+  /* display: none; */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.navbarItemContainer {
+  display: none;
+}
+.hamburgerMenuIcon{
+  opacity: 1;
+  z-index: 10000;
+  transform: scale(1.2);
+}
+.titleSection{
+  padding-left: 0px;
+}
+.title{
+  font-size: 1.56rem;
+  text-align: center;
+  max-width: auto;
+}
+.floatingPhoneImg{
+  margin-top: 35px;
+  width: 230px;
+  height: 465px;
+  align-self: center;
+}
+.firstSectionContainer{
+height: auto;
+padding-bottom: 50px;
+}
+.appstoreBtn{
+  width: 8.2rem;
+}
+.appStoreBtnContainer{
+  display: flex;
+  margin:auto;
+  justify-content: center;
+}
+.contactUsForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: -40%;
+  box-shadow: 0px 0px 7px 0.3px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 0px 7px 0.3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.6);
+  
+}
+.contactUsFormInputFields{
+  width: 70%;
+}
+.contactNumber{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.emailContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactUsFormInputFields button{
+  margin: auto;
+}
+.downloadAppWrapper{
+  background-color: #62c8f0;
+  padding-bottom :25px;
+}
+.contactUsContainer{
+  background-image: linear-gradient(to bottom,white,white);
+}
+.container{
+  flex-direction: column;
+  display: flex;
+}
+.footerContainer p:first-child{
+  margin-top: 50vmax
+}
+.emailContainer{
+  margin-left: 12px;
+}
+.downloadAppWrapper h1{
+  font-size: 2.0rem;
+}
+.screenshotsWrapper h1{
+  font-size: 2.0rem;
+}
+.flexibleNavbar{
+  background-color: white;
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.titleSection{
+  margin-top: 110px;
+}
+.hamburgerMenuFixedNavbarListItem{
+  color: #333;
+  z-index: 9999999;
+  display: block;
+}
+.hamburgerMenuFixedNavbarListContainer {
+  list-style-type: none;
+  display: block;
+  background-color: #ccc;
+  color: #333;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  transform-origin: 0 0;
+   transform: scaleY(1);
+  height: auto;
+  opacity: 1;
+  transition: all ease 0.45s;
+}
+.hamburgerMenuFixedNavbarListItem{
+  border-top: 1px solid #eee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.hamburgerMenuFixedNavbar{
+  margin: auto;
+  width: 65%;
+}
+.toggledTitleAndBtnWrapper{
+  margin-top: 200px;
+  transition: all 0.35s ease;
+}
+.hiddenHamburgerMenuFixedNavbarListContainer{
+  list-style-type: none;
+  background-color: #ccc;
+  color: #333;
+  opacity: 0;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  transform: scaleY(0); 
+  position: fixed;
+  transform-origin: top;
+  transition: all ease 0.25s;
+  width: 65%;
+}
+}
+@media only screen and (min-width: 1101px) and (max-width:1215px){
+  .floatingPhoneImg{
+   width: 20vw;
+  }
+  .cardComponent{
+    max-width: 280px;
+  }
+  .wrapper{
+    width: 72vw;
+  }
+}
+@media only screen and (max-width:370px){
+.downloadAppWrapper h1{
+  font-size: 1.8rem;
+}
+}
+@media only screen and (min-width: 1215px) and (max-width:1400px){
+  .cardComponent{
+max-width: 300px;
+  }
+}
