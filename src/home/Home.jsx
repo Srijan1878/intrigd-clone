@@ -53,18 +53,58 @@ export default function Home({slidesToShow = 3}) {
   const contact = useRef();
   const homeScrollHandler = () => {
     home.current.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth<768){
+     setHamburgerMenuFixedNavbar(false)
+    }
+    else if(window.innerWidth>768 && window.innerWidth<992){
+      setHamburgerMenu(false) 
+      }
   };
   const aboutScrollHandler = () => {
     about.current.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth<768){
+      setHamburgerMenuFixedNavbar(false)
+     }
+     else if(window.innerWidth>768 && window.innerWidth<992){
+    setHamburgerMenu(false) 
+    }
+
   };
   const testimonialScrollHandler = () => {
     testimonial.current.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth<768){
+      setHamburgerMenuFixedNavbar(false)
+     }
+     else if(window.innerWidth>768 && window.innerWidth<992){
+      setHamburgerMenu(false) 
+      }
   };
   const featureScrollHandler = () => {
     feature.current.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth<768){
+      setHamburgerMenuFixedNavbar(false)
+     }
+     else if(window.innerWidth>768 && window.innerWidth<992){
+      setHamburgerMenu(false) 
+      }
+  };
+  const screenshotScrollHandler = () => {
+    screenshot.current.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth<768){
+      setHamburgerMenuFixedNavbar(false)
+     }
+     else if(window.innerWidth>768 && window.innerWidth<992){
+      setHamburgerMenu(false) 
+      }
   };
   const contactScrollHandler = () => {
     contact.current.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth<768){
+      setHamburgerMenuFixedNavbar(false)
+     }
+     else if(window.innerWidth>768 && window.innerWidth<992){
+      setHamburgerMenu(false) 
+      }
   };
   const settings = {
     centerMode: true,
@@ -114,6 +154,9 @@ export default function Home({slidesToShow = 3}) {
             <li className="navbarItem" onClick={testimonialScrollHandler}>
               testimonial
             </li>
+            <li className="navbarItem" onClick={testimonialScrollHandler}>
+              screenshot
+            </li>
             <li className="navbarItem" onClick={featureScrollHandler}>
               feature
             </li>
@@ -136,6 +179,9 @@ export default function Home({slidesToShow = 3}) {
             <li className="navbarItem" onClick={testimonialScrollHandler}>
               testimonial
             </li>
+            <li className="navbarItem" onClick={testimonialScrollHandler}>
+              screenshot
+            </li>
             <li className="navbarItem" onClick={featureScrollHandler}>
               feature
             </li>
@@ -145,12 +191,12 @@ export default function Home({slidesToShow = 3}) {
           </ul>
           <div className="hamburgerMenuFixedNavbar">
         <ul className={hamburgerMenuFixedNavbar?"hamburgerMenuFixedNavbarListContainer":"hiddenHamburgerMenuFixedNavbarListContainer"}>
-        <li className="hamburgerMenuFixedNavbarListItem">HOME</li>
-        <li className="hamburgerMenuFixedNavbarListItem">ABOUT</li>
-        <li className="hamburgerMenuFixedNavbarListItem">FEATURE</li>
-        <li className="hamburgerMenuFixedNavbarListItem">SCREENSHOT</li>
-        <li className="hamburgerMenuFixedNavbarListItem">TESTIMONIAL</li>
-        <li className="hamburgerMenuFixedNavbarListItem">CONTACT</li>
+        <li className="hamburgerMenuFixedNavbarListItem" onClick={homeScrollHandler}>HOME</li>
+        <li className="hamburgerMenuFixedNavbarListItem" onClick={aboutScrollHandler}>ABOUT</li>
+        <li className="hamburgerMenuFixedNavbarListItem" onClick={featureScrollHandler}>FEATURE</li>
+        <li className="hamburgerMenuFixedNavbarListItem" onClick={screenshotScrollHandler}>SCREENSHOT</li>
+        <li className="hamburgerMenuFixedNavbarListItem" onClick={testimonialScrollHandler}>TESTIMONIAL</li>
+        <li className="hamburgerMenuFixedNavbarListItem" onClick={contactScrollHandler}>CONTACT</li>
         </ul>
         </div>
         </div>
@@ -163,12 +209,12 @@ export default function Home({slidesToShow = 3}) {
           />}
         <div className="hamburgerMenu">
         <ul className={hamburgerMenu?"hamburgerMenuListContainer":"hiddenHamburgerMenuListContainer"}>
-        <li className="hamburgerMenuListItem">HOME</li>
-        <li className="hamburgerMenuListItem">ABOUT</li>
-        <li className="hamburgerMenuListItem">FEATURE</li>
-        <li className="hamburgerMenuListItem">SCREENSHOT</li>
-        <li className="hamburgerMenuListItem">TESTIMONIAL</li>
-        <li className="hamburgerMenuListItem">CONTACT</li>
+        <li className="hamburgerMenuListItem" onClick={homeScrollHandler}>HOME</li>
+        <li className="hamburgerMenuListItem" onClick={aboutScrollHandler}>ABOUT</li>
+        <li className="hamburgerMenuListItem" onClick={featureScrollHandler}>FEATURE</li>
+        <li className="hamburgerMenuListItem" onClick={screenshotScrollHandler}>SCREENSHOT</li>
+        <li className="hamburgerMenuListItem" onClick={testimonialScrollHandler}>TESTIMONIAL</li>
+        <li className="hamburgerMenuListItem" onClick={contactScrollHandler}>CONTACT</li>
         </ul>
         </div>
         </div>
