@@ -9,6 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import AppleIcon from '@material-ui/icons/Apple';
 import AndroidIcon from '@material-ui/icons/Android';
+import CloseIcon from '@material-ui/icons/Close';
 export default function Home({slidesToShow = 3}) {
   const [showText, setShowText] = useState(false);
   const [ImageIndex,setImageIndex] = useState(0);
@@ -154,11 +155,12 @@ export default function Home({slidesToShow = 3}) {
         </div>
         </div>
         <div className={hamburgerMenu?"hamburgerMenuContainer":"hiddenHamburgerMenuContainer"}>
-        <MenuIcon className="hamburgerMenuIcon" onClick={()=>{
-          window.innerWidth>768?setHamburgerMenu(!hamburgerMenu):setHamburgerMenuFixedNavbar(!hamburgerMenuFixedNavbar);
+        {hamburgerMenu || hamburgerMenuFixedNavbar?<CloseIcon className="closeHamburgerMenu" onClick={()=>{window.innerWidth>768?setHamburgerMenu(false):setHamburgerMenuFixedNavbar(false)  
+      }}/>:<MenuIcon className="hamburgerMenuIcon" onClick={()=>{
+          window.innerWidth>768?setHamburgerMenu(true):setHamburgerMenuFixedNavbar(!hamburgerMenuFixedNavbar);
         }
           }
-          />
+          />}
         <div className="hamburgerMenu">
         <ul className={hamburgerMenu?"hamburgerMenuListContainer":"hiddenHamburgerMenuListContainer"}>
         <li className="hamburgerMenuListItem">HOME</li>
